@@ -1,0 +1,20 @@
+:root {
+
+    /* colors */
+    --very-dk-gray-blue: hsl(217, 19%, 35%);
+    --desat-dk-blue: hsl(214, 17%, 51%);
+    --gray-blue: hsl(212, 23%, 69%);
+    --lt-gray-blue: hsl(210, 46%, 95%);
+
+    /* font size */
+    --fs-400: 0.813rem;
+
+    /* font weight */
+    --fw-regular: 500;
+    --fw-bold: 700;
+}
+
+
+body {
+    font-family: 'Manrope', sans-serif;
+}
