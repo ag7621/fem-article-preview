@@ -6,6 +6,17 @@
     --gray-blue: hsl(212, 23%, 69%);
     --lt-gray-blue: hsl(210, 46%, 95%);
 
+    --white: hsl(0, 0%, 100%);
+
+    /* components */
+    --clr-main-bg: var(--lt-gray-blue);
+    --clr-card-bg: var(--white);
+
+    --clr-heading-primary: var(--very-dk-gray-blue);
+    --clr-text-primary: var(--desat-dk-blue);
+
+    --clr-btn-primary: var(--gray-blue);
+
     /* font size */
     --fs-400: 0.813rem;
 
@@ -14,7 +25,98 @@
     --fw-bold: 700;
 }
 
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
 
 body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+
+body {
+    background-color: var(--clr-main-bg);
+    color: var(--clr-text-primary);
     font-family: 'Manrope', sans-serif;
+    font-size: var(--fs-400);
+    font-weight: var(--fw-regular);
+
+    display: grid;
+    place-content: center;
+}
+
+.card {
+    display: flex;
+    background-color: var(--clr-card-bg);
+    max-width: 45.625rem;
+}
+
+.card__img {
+    background-image: url("images/drawers.jpg");
+    background-size: cover;
+    width: 40rem;
+}
+
+.card__content {
+    padding: 2.5rem;
+}
+
+.card__author {
+    display: flex;
+}
+
+.card__author-img {
+    border-radius: 50%;
+    height: 2.375rem;
+}
+
+button {
+    margin-left: auto;
 }
