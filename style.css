@@ -15,7 +15,7 @@
     --clr-heading-primary: var(--very-dk-gray-blue);
     --clr-text-primary: var(--desat-dk-blue);
 
-    --clr-btn-primary: var(--gray-blue);
+    --clr-btn-primary: var(--lt-gray-blue);
 
     /* font size */
     --fs-400: 0.813rem;
@@ -130,6 +130,7 @@ body {
 .card__author {
     display: flex;
     padding: 1.75rem 2rem 1.5rem;
+    align-items: center;
 }
 
 .card__author-img {
@@ -147,7 +148,22 @@ body {
     letter-spacing: 0.15px;
 }
 
+.social-links {
+    margin-left: auto;
+    background: var(--clr-btn-primary);
+    border-radius: 50%;
+    padding: 0.5rem;
+}
+
 button {
+    background-image: url("images/icon-share.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    border: none;
+    /* height: 11px; */
+    /* width: 25px; */
+    padding: 0.25rem 1.25rem;
     margin-left: auto;
 }
 
