@@ -20,6 +20,7 @@
     /* font size */
     --fs-400: 0.813rem;
     --fs-500: 1rem;
+    --fs-600: 1.25rem;
     /* font weight */
     --fw-regular: 500;
     --fw-bold: 700;
@@ -150,16 +151,33 @@ button {
     margin-left: auto;
 }
 
-/* @media (min-width: 600px) {
+@media (min-width: 600px) {
 
     .card {
+        display: grid;
         grid-template-columns: 39% 1fr;
         grid-template-rows: 1fr;
         max-width: 45.625rem;
     }
 
     .card__img {
-        background-repeat: no-repeat;
-        background-position: left;
+        height: 100%;
     }
-} */
+
+    .card__content {
+        padding: 2rem 2.4rem 0 2.5rem;
+    }
+
+    .card__title {
+        font-size: var(--fs-600);
+        line-height: 1.4;
+    }
+
+    .card__content>p {
+        margin-top: 0.875rem;
+    }
+
+    .card__author {
+        padding: 1.25rem 2.5rem 2rem;
+    }
+}
