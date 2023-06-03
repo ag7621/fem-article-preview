@@ -11,9 +11,11 @@
     /* components */
     --clr-main-bg: var(--lt-gray-blue);
     --clr-card-bg: var(--white);
+    --clr-social-bg: var(--very-dk-gray-blue);
 
     --clr-heading-primary: var(--very-dk-gray-blue);
     --clr-text-primary: var(--desat-dk-blue);
+    --clr-text-social-primary: var(--gray-blue);
 
     --clr-btn-primary: var(--lt-gray-blue);
 
@@ -114,7 +116,7 @@ body {
     overflow: hidden;
 }
 
-.card__content {
+.card__body {
     padding: 2.25rem 2.4rem 0 2rem;
 }
 
@@ -123,13 +125,14 @@ body {
     font-size: var(--fs-500);
 }
 
-.card__content>p {
-    margin-top: 1rem;
+.card__body>p {
+    /* margin-top: 1rem; */
+    margin-top: 0.75rem;
 }
 
 .card__author {
     display: flex;
-    padding: 1.75rem 2rem 1.5rem;
+    /* padding: 1.75rem 2rem 1.5rem; */
     align-items: center;
 }
 
@@ -142,6 +145,18 @@ body {
     margin-left: 1.125rem;
 }
 
+.card__footer {
+    display: flex;
+    align-items: center;
+
+    /* padding: 1.75rem 2rem 1.5rem; */
+
+    /* background: var(--clr-social-bg); */
+
+    margin-top: 1.25rem;
+    padding: 1rem 2rem 1.25rem;
+}
+
 .author__name {
     color: var(--clr-heading-primary);
     font-size: var(--fs-400);
@@ -151,8 +166,29 @@ body {
 .social-links {
     margin-left: auto;
     background: var(--clr-btn-primary);
+    /* background-image: url("images/icon-share.svg");
+    background-repeat: no-repeat;
+    background-position: center; */
     border-radius: 50%;
     padding: 0.5rem;
+}
+
+.card__social-links {
+    display: flex;
+    /* background: var(--clr-social-bg); */
+    color: var(--clr-text-social-primary);
+    /* margin-top: 1rem; */
+    /* padding: 1.35rem 2rem 1.4rem; */
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+/* .social {
+    display: flex;   
+} */
+
+.card__social-links a {
+    margin-left: 1rem;
 }
 
 button {
@@ -165,6 +201,10 @@ button {
     /* width: 25px; */
     padding: 0.25rem 1.25rem;
     margin-left: auto;
+}
+
+.hidden {
+    display: none;
 }
 
 @media (min-width: 600px) {
@@ -180,7 +220,7 @@ button {
         height: 100%;
     }
 
-    .card__content {
+    .card__body {
         padding: 2rem 2.4rem 0 2.5rem;
     }
 
@@ -189,11 +229,11 @@ button {
         line-height: 1.4;
     }
 
-    .card__content>p {
+    .card__body>p {
         margin-top: 0.875rem;
     }
 
-    .card__author {
+    /* .card__author {
         padding: 1.25rem 2.5rem 2rem;
-    }
+    } */
 }
