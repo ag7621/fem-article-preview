@@ -8,4 +8,5 @@ socialBtn.addEventListener('click', () => {
     cardFooter.classList.toggle('card__footer-active')
     authorInfo.classList.toggle('disabled')
     socialMedia.classList.toggle('disabled')
+    socialBtn.classList.toggle('social-links-active')
 })

@@ -19,6 +19,8 @@
 
     --clr-btn-primary: var(--lt-gray-blue);
 
+    --clr-btn-bg-active: var(--desat-dk-blue);
+
     /* font size */
     --fs-400: 0.813rem;
     --fs-500: 1rem;
@@ -114,6 +116,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 0 25%;
+    border-radius: 10px 10px 0 0;
     height: 12.5rem;
     overflow: hidden;
 }
@@ -156,13 +159,16 @@ body {
     /* background: var(--clr-social-bg); */
 
     margin-top: 1.25rem;
-    padding: 1rem 2rem 1.25rem;
+    padding: 1rem 2.5rem 1.25rem;
 
     position: relative;
 }
 
 .card__footer-active {
     background: var(--clr-social-bg);
+    border-radius: 0 0 10px 10px;
+    /* margin-top: 1.875rem; */
+    padding: 1.25rem 2.5rem 1.625rem;
 }
 
 .author__name {
@@ -179,7 +185,16 @@ body {
     background-position: center; */
     border-radius: 50%;
     padding: 0.5rem;
+
+    /* background-image: url('images/icon-share.svg');
+    background-repeat: no-repeat;
+    background-position: center; */
+    color: var(--clr-btn-bg-active);
 }
+
+/* .social-links::after {
+    content: url('images/');
+} */
 
 .card__social-links {
     display: flex;
@@ -190,6 +205,13 @@ body {
     text-transform: uppercase;
     letter-spacing: 5px;
 }
+
+.social-links-active {
+    background-color: var(--clr-btn-bg-active);
+    color: white;
+    fill: teal;
+}
+
 
 /* .social {
     display: flex;   
@@ -241,6 +263,10 @@ button {
         margin-top: 0.875rem;
     }
 
+    .card__footer {
+        margin-top: 1.25rem;
+    }
+
     /* .active {
         display: flex;
     } */
@@ -250,7 +276,8 @@ button {
     } */
 
     .card__footer-active {
-        background: teal;
+        background: white;
+        padding: 1rem 2.5rem 1.25rem;
     }
 
     .card__author.disabled {
@@ -259,10 +286,21 @@ button {
 
     .card__social-links {
         position: absolute;
-        background: cyan;
+        background: var(--clr-social-bg);
         border-radius: 10px;
         top: -4.75rem;
         right: -4.25rem;
         padding: 1.125rem 2.25rem;
+    }
+
+    .card__social-links:before {
+        position: absolute;
+        content: '';
+        background: var(--clr-social-bg);
+        height: 20px;
+        width: 20px;
+        bottom: -10px;
+        left: 45%;
+        transform: rotate(45deg);
     }
 }
